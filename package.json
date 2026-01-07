@@ -1,0 +1,17 @@
+{
+  "name": "knight-online-web",
+  "version": "1.0.0",
+  "description": "MMORPG 3D Web estilo Knight Online",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

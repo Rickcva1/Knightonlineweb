@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight Online Web - MMORPG 3D</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+        * { margin: 0; padding: 0; }
+        body { overflow: hidden; font-family: Arial, sans-serif; }
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            z-index: 100;
+            pointer-events: none;
+        }
+        #loginScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .login-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid #0f3460;
+            color: white;
+            min-width: 300px;
+        }
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #0f3460;
+            border: 1px solid #e94560;
+            color: white;
+            border-radius: 5px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background: #e94560;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .class-selection {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .class-option {
+            flex: 1;
+            padding: 10px;
+            background: #0f3460;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .class-option.selected {
+            border-color: #e94560;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginScreen">
+        <div class="login-box">
+            <h2>Knight Online Web</h2>
+            <input type="text" id="username" class="login-input" placeholder="Nome do Personagem">
+            <div class="class-selection">
+                <div class="class-option" data-class="warrior">⚔️ Guerreiro</div>
+                <div class="class-option" data-class="rogue">🗡️ Assassino</div>
+                <div class="class-option" data-class="mage">🔮 Mago</div>
+                <div class="class-option" data-class="priest">✨ Sacerdote</div>
+            </div>
+            <button id="loginBtn" class="login-button">ENTRAR NO JOGO</button>
+        </div>
+    </div>
+    
+    <div id="gameContainer">
+        <div id="ui">
+            <div>HP: <span id="hpValue">100</span>/100</div>
+            <div>MP: <span id="mpValue">50</span>/50</div>
+            <div>Level: <span id="levelValue">1</span></div>
+            <div>EXP: <span id="expValue">0</span>/100</div>
+            <div id="playerCount">Jogadores Online: 1</div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Orbit Controls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Socket.IO Client -->
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
