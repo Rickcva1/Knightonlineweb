@@ -1,0 +1,70 @@
+2026-01-07T02:27:47.040738841Z ==> Cloning from https://github.com/Rickcva1/Knightonlineweb
+2026-01-07T02:27:47.592500538Z ==> Checking out commit f230ce76b55d879dcb1c8d6b1ef4d5ae5bbd7eda in branch main
+2026-01-07T02:27:49.08381042Z ==> Using Node.js version 22.16.0 (default)
+2026-01-07T02:27:49.110205948Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-01-07T02:27:51.142881975Z ==> Running build command 'npm install'...
+2026-01-07T02:27:55.929638804Z 
+2026-01-07T02:27:55.929663975Z added 119 packages, and audited 120 packages in 5s
+2026-01-07T02:27:55.929678036Z 
+2026-01-07T02:27:55.929691827Z 19 packages are looking for funding
+2026-01-07T02:27:55.929698217Z   run `npm fund` for details
+2026-01-07T02:27:55.932834357Z 
+2026-01-07T02:27:55.932846287Z 3 high severity vulnerabilities
+2026-01-07T02:27:55.932850968Z 
+2026-01-07T02:27:55.932856208Z To address all issues (including breaking changes), run:
+2026-01-07T02:27:55.932861348Z   npm audit fix --force
+2026-01-07T02:27:55.932865379Z 
+2026-01-07T02:27:55.932870109Z Run `npm audit` for details.
+2026-01-07T02:27:57.066968968Z ==> Uploading build...
+2026-01-07T02:28:03.386830262Z ==> Uploaded in 5.4s. Compression took 0.9s
+2026-01-07T02:28:03.399632194Z ==> Build successful 🎉
+2026-01-07T02:28:07.015239985Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-07T02:28:07.030029144Z ==> Deploying...
+2026-01-07T02:28:22.321530646Z ==> Running 'npm start'
+2026-01-07T02:28:23.32607539Z 
+2026-01-07T02:28:23.326099131Z > knight-online-web@1.0.0 start
+2026-01-07T02:28:23.326104001Z > node server/server.js
+2026-01-07T02:28:23.326105681Z 
+2026-01-07T02:28:23.52708788Z node:internal/modules/cjs/loader:1404
+2026-01-07T02:28:23.527108821Z   throw err;
+2026-01-07T02:28:23.527112351Z   ^
+2026-01-07T02:28:23.527114981Z 
+2026-01-07T02:28:23.527119971Z Error: Cannot find module '/opt/render/project/src/server/server.js'
+2026-01-07T02:28:23.527122861Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+2026-01-07T02:28:23.527125691Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+2026-01-07T02:28:23.527128011Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+2026-01-07T02:28:23.527132091Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+2026-01-07T02:28:23.527134572Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-01-07T02:28:23.527136912Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-01-07T02:28:23.527141912Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+2026-01-07T02:28:23.527147062Z     at node:internal/main/run_main_module:36:49 {
+2026-01-07T02:28:23.527151982Z   code: 'MODULE_NOT_FOUND',
+2026-01-07T02:28:23.527155752Z   requireStack: []
+2026-01-07T02:28:23.527158272Z }
+2026-01-07T02:28:23.527160542Z 
+2026-01-07T02:28:23.527163102Z Node.js v22.16.0
+2026-01-07T02:28:24.847570507Z ==> Exited with status 1
+2026-01-07T02:28:24.862241615Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2026-01-07T02:28:29.278735556Z ==> Running 'npm start'
+2026-01-07T02:28:30.275503336Z 
+2026-01-07T02:28:30.275530497Z > knight-online-web@1.0.0 start
+2026-01-07T02:28:30.275536107Z > node server/server.js
+2026-01-07T02:28:30.275538867Z 
+2026-01-07T02:28:30.479678123Z node:internal/modules/cjs/loader:1404
+2026-01-07T02:28:30.479704014Z   throw err;
+2026-01-07T02:28:30.479707394Z   ^
+2026-01-07T02:28:30.479709714Z 
+2026-01-07T02:28:30.479712974Z Error: Cannot find module '/opt/render/project/src/server/server.js'
+2026-01-07T02:28:30.479715644Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+2026-01-07T02:28:30.479717974Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+2026-01-07T02:28:30.479720434Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+2026-01-07T02:28:30.479723644Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+2026-01-07T02:28:30.479726204Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-01-07T02:28:30.479728595Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-01-07T02:28:30.479731435Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+2026-01-07T02:28:30.479752225Z     at node:internal/main/run_main_module:36:49 {
+2026-01-07T02:28:30.479755885Z   code: 'MODULE_NOT_FOUND',
+2026-01-07T02:28:30.479759125Z   requireStack: []
+2026-01-07T02:28:30.479766205Z }
+2026-01-07T02:28:30.479768596Z 
+2026-01-07T02:28:30.479771206Z Node.js v22.16.0
